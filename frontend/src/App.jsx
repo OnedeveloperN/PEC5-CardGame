@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { ArrowUp, ArrowDown, RotateCcw, Save } from 'lucide-react';
 import Card from './components/Card';
-import Leaderboard from './components/LeaderBoard';
+import LeaderBoard from './components/LeaderBoard';
 import { createDeck } from './utils/deck';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/games';
