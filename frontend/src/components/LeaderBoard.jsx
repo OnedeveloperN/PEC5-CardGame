@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Trophy, Trash2, Edit2, Check, X } from 'lucide-react';
 
-export default function Leaderboard({ games, onDelete, onUpdate }) {
+export default function LeaderBoard({ games, onDelete, onUpdate }) {
     const [editingId, setEditingId] = useState(null);
     const [editComment, setEditComment] = useState('');
 

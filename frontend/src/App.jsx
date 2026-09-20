@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { ArrowUp, ArrowDown, RotateCcw, Save } from 'lucide-react';
 import Card from './components/Card';
-import Leaderboard from './components/Leaderboard';
+import Leaderboard from './components/LeaderBoard';
 import { createDeck } from './utils/deck';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/games';
@@ -205,7 +205,7 @@ export default function App() {
       )}
 
       {/* Leaderboard y gestión de registros */}
-      <Leaderboard games={games} onDelete={handleDeleteGame} onUpdate={handleUpdateComment} />
+      <LeaderBoard games={games} onDelete={handleDeleteGame} onUpdate={handleUpdateComment} />
     </div>
   );
 }
