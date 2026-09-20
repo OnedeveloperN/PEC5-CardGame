@@ -1,0 +1,37 @@
+### Variables
+@baseUrl = http://localhost:5000/api/games
+
+### 1. Comprobar que el servidor está vivo
+GET http://localhost:5000/
+
+### 2. Guardar una nueva partida (POST - Create)
+# @name createGame
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "player": "Nicolas",
+  "score": 7,
+  "comment": "¡Casi llego a los 10 aciertos seguidos!"
+}
+
+### Guardar variable ID de la partida creada arriba
+@createdGameId = {{createGame.response.body._id}}
+
+### 3. Obtener el Ranking / Leaderboard (GET - Read All)
+GET {{baseUrl}}
+
+### 4. Obtener una partida por su ID (GET - Read One)
+GET {{baseUrl}}/{{createdGameId}}
+
+### 5. Actualizar el comentario o jugador de una partida (PUT - Update)
+PUT {{baseUrl}}/{{createdGameId}}
+Content-Type: application/json
+
+{
+  "player": "Nico Dev",
+  "comment": "Comentario actualizado: La próxima supero mi récord."
+}
+
+### 6. Eliminar una partida del historial (DELETE - Delete)
+DELETE {{baseUrl}}/{{createdGameId}}

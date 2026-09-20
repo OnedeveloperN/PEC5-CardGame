@@ -1,0 +1,17 @@
+# Depósitos de dependencias
+node_modules/
+.pnpm-store/
+
+# Archivos de entorno y credenciales (¡MUY IMPORTANTE!)
+.env
+.env.local
+.env.production
+
+# Compilados y builds
+dist/
+build/
+.vite/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

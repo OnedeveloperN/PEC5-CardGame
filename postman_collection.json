@@ -1,0 +1,103 @@
+{
+    "info": {
+        "name": "PEC5 - High-Low Card Game API",
+        "description": "Colección de pruebas para el CRUD de partidas de la PEC5",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Obtener Ranking (GET)",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:5000/api/games",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "games"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Guardar Partida (POST)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"player\": \"Nicolas\",\n  \"score\": 5,\n  \"comment\": \"Partida de prueba\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/api/games",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "games"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Actualizar Partida (PUT)",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"player\": \"Nicolas Pro\",\n  \"comment\": \"Comentario actualizado desde Postman\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/api/games/ID_AQUI",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "games",
+                        "ID_AQUI"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Eliminar Partida (DELETE)",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:5000/api/games/ID_AQUI",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "games",
+                        "ID_AQUI"
+                    ]
+                }
+            }
+        }
+    ]
+}
